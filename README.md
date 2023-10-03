@@ -4,56 +4,26 @@
 
 <div align="center">
 
-# kirami-plugin-example
+# kirami-plugin-horserace
 
-_✨ KiramiBot 插件简单描述 ✨_
+_✨ 群内赛马小游戏 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/kirami-plugin-example.svg" alt="license">
+    <img src="https://img.shields.io/github/license/FrostN0v0/kirami-plugin-horserace.svg" alt="license">
 </a>
 <a href="https://pypi.python.org/pypi/kiramibot-plugin-example">
-    <img src="https://img.shields.io/pypi/v/kirami-plugin-example.svg" alt="pypi">
+    <img src="https://img.shields.io/pypi/v/kirami-plugin-horserace.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
 
 </div>
 
-这是一个 KiramiBot 插件项目的模板库, 你可以直接使用本模板创建你的 KiramiBot 插件项目的仓库
-
-模板库使用方法:
-1. 点击仓库中的 "Use this template" 按钮, 输入仓库名与描述, 点击 "Create repository from template" 创建仓库
-2. 在创建好的新仓库中, 在 "Add file" 菜单中选择 "Create new file", 在新文件名处输入`LICENSE`, 此时在右侧会出现一个 "Choose a license template" 按钮, 点击此按钮选择开源协议模板, 然后在最下方提交新文件到主分支
-3. 全局替换`owner`为仓库所有者ID; 全局替换`kirami-plugin-example`为插件名; 全局替换`kirami_plugin_example`为包名; 修改 python 徽标中的版本为你插件的运行所需版本
-4. 修改 README 中的插件名和插件描述, 并在下方填充相应的内容
-
-配置发布工作流:
-1. 跟随 [PyPI 文档](https://docs.pypi.org/trusted-publishers/) 配置 可信发布
-   - **PyPI Project Name** 插件名，如：`kirami-plugin-xxx`
-   - **Owner** 你的 Github 用户名
-   - **Repository name** 仓库名，如：`kirami-plugin-xxx`
-   - **Workflow name** 发布工作流，填写 `release.yml`
-   - **Environment name** 是你的发布环境，填写 `release`
-     
-   例如，如果您有一个位于 https://github.com/octo-org/sampleproject 的存储库，其发布工作流程位于 `release.yml`，并且您希望将其作为示例项目发布到 PyPI，那么您将执行以下操作： 
-   <div align="left">
-     <img src="https://docs.pypi.org/assets/pending-publisher-form-filled.png" style="wight: 1000px; height: 600px"/>
-   </div>
-
-3. 进入工作流，修改 `environment`
-   
-   ```yaml
-   environment:
-      name: release
-      url: https://pypi.org/p/<your-pypi-project-name>
-   ```
-
-4. 发版
-
-
 ## 📖 介绍
 
-这里是插件的详细介绍部分
+适用于KiramiBot的赛马小游戏插件
+
+由 [zhenxun_bot_HorseRace](https://github.com/Evan8440/zhenxun_bot_HorseRace) & [nonebot_plugin_horserace](https://github.com/shinianj/nonebot_plugin_horserace) 适配而来,稍作修改，添加合并消息返回配置项
 
 ## 💿 安装
 
@@ -63,28 +33,28 @@ _✨ KiramiBot 插件简单描述 ✨_
 <summary>pip</summary>
   
 ```bash
-pip install kirami-plugin-example
+pip install kirami-plugin-horserace
 ```
 </details>
 <details>
 <summary>pdm</summary>
 
 ```bash
-pdm add kirami-plugin-example
+pdm add kirami-plugin-horserace
 ```
 </details>
 <details>
 <summary>poetry</summary>
 
 ```bash
-poetry add kirami-plugin-example
+poetry add kirami-plugin-horserace
 ```
 </details>
 <details>
 <summary>conda</summary>
 
 ```bash
-conda install kirami-plugin-example
+conda install kirami-plugin-horserace
 ```
 </details>
 
@@ -99,14 +69,31 @@ plugins = ["kiramit_plugin_example"]
 
 | 配置项 | 必填 | 默认值 | 说明 |
 |:-----:|:----:|:----:|:----:|
-| 配置项1 | 是 | 无 | 配置说明 |
-| 配置项2 | 否 | 无 | 配置说明 |
+| send_forward_msg | 否 | True | 将图片以合并消息发送 |
+| pic_font_size | 否 | 16 | 图片字体大小 |
+| setting_track_length | 否 | 20 | 跑道长度 |
+| setting_random_min_length | 否 | 0 | 随机位置事件，最小能到的跑道距离 |
+| setting_random_max_length | 否 | 15 | 随机位置事件，最大能到的跑道距离 |
+| base_move_min | 否 | 1 | 每回合基础移动力最小值 |
+| base_move_max | 否 | 3 | 每回合基础移动力最大值 |
+| max_player | 否 | 8 | 最大支持玩家数 |
+| min_player | 否 | 2 | 最小支持玩家数 |
+| setting_over_time | 否 | 120 | 超时允许重置最少时间，秒 |
+| event_rate | 否 | 450 | 事件概率 = event_rate / 1000 |
 
 ## 🎉 使用
 ### 指令表
 | 指令 | 权限 | 需要@ | 范围 | 说明 |
 |:-----:|:----:|:----:|:----:|:----:|
-| 指令1 | 主人 | 否 | 私聊 | 指令说明 |
-| 指令2 | 群员 | 是 | 群聊 | 指令说明 |
+| 赛马创建 | 群员 | 否 | 群聊 | 创建游戏 |
+| 赛马加入 [你的马儿名称] | 群员 | 否 | 群聊 | 加入赛马游戏 |
+| 赛马开始 | 群员 | 否 | 群聊 | 开始游戏 |
+| 赛马重置 | 主人 | 否 | 群聊 | 重置已有赛马 |
+| 赛马清空 | 主人 | 否 | 群聊 | 清空已有赛马 |
+| 赛马事件重载 | 主人 | 否 | 群聊 | 重载事件文件 |
+
 ### 效果图
-如果有效果图的话
+
+<img align="left" src="https://ghproxy.com/https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/main/src/example1.jpg" width='380px' alt="示例1">
+
+<img align="left" src="https://ghproxy.com/https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/main/src/example2.jpg" width='380px' alt="示例2">
