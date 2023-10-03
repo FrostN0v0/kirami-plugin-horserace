@@ -94,6 +94,6 @@ plugins = ["kiramit_plugin_example"]
 
 ### 效果图
 
-<img align="left" src="https://ghproxy.com/https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/main/src/example1.jpg" width='380px' alt="示例1">
+<img align="left" src="https://ghproxy.com/https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/master/example1.jpg" width='380px' alt="示例1">
 
-<img align="left" src="https://ghproxy.com/https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/main/src/example2.jpg" width='380px' alt="示例2">
+<img align="left" src="https://ghproxy.com/https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/master/example2.jpg" width='380px' alt="示例2">
