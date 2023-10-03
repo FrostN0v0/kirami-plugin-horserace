@@ -60,7 +60,7 @@ conda install kirami-plugin-horserace
 
 打开 KiramiBot 项目根目录下的配置文件, 以 `kirami.toml` 为例，在 `[plugin]` 部分追加写入
 ```toml
-plugins = ["kiramit_plugin_example"]
+plugins = ["kiramit_plugin_horserace"]
 ```
 
 ## ⚙️ 配置
