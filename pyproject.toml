@@ -1,0 +1,15 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "FrostN0v0", email = "1614591760@qq.com"},
+]
+dependencies = [
+    "kiramibot>=0.3.2",
+    "Pillow==9.5.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
