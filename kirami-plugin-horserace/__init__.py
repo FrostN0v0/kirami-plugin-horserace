@@ -30,7 +30,7 @@ async def init_resourse():
     events_list = await load_dlcs()
     if not (FONT_DIR / "HYWenHei-85W.ttf").exists():
         await Downloader.download_file(
-            url='https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/main/HYWenHei-85W.ttf',
+            url='https://raw.githubusercontent.com/FrostN0v0/kirami-plugin-horserace/master/HYWenHei-85W.ttf',
             path=FONT_DIR
         )
 
