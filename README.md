@@ -12,7 +12,7 @@ _✨ 群内赛马小游戏 ✨_
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/FrostN0v0/kirami-plugin-horserace.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/kiramibot-plugin-horserace">
+<a href="https://pypi.python.org/pypi/kirami-plugin-horserace">
     <img src="https://img.shields.io/pypi/v/kirami-plugin-horserace.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.10+-blue.svg" alt="python">
